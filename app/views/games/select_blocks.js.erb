@@ -1,0 +1,5 @@
+highlightBlocks("<%= @highlighted_blocks %>", "<%= @level %>")
+$('.grid .btn').off('click');
+setTimeout(function(){
+  $('.grid .btn').on('click', addClasses);
+}, (6 - "<%@level%>") * 1000)

@@ -1,0 +1,7 @@
+<%= form_for(:game, url: get_view_games_path, method: 'get', remote: true) do |f| %>
+  Lavel: <%= f.select('level', @levels, {}, {:class=> "selectpicker"}) %><br />
+  Grid Size : <%= f.select('size', @sizes, {}, {:class=> "selectpicker"}) %><br />
+  <%= f.submit 'Select Game', class: "btn btn-default" %>
+<% end %>
+<div class='grid'>
+</div>

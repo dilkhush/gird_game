@@ -1,0 +1,14 @@
+<% size.times do |row|%>
+  <div class="btn-group">
+    <% size.times do |column|%>
+      <button id='button_<%=row%>_<%=column%>' type="button" class="btn"></button>
+    <%end%>
+  </div>
+  <br/>
+<%end%>
+</br>
+</br>
+<div class="list-group">
+  <%= link_to "Start Game", select_blocks_games_path(size: size, level: level), remote: true, class: "list-group-item active", style: "display: inline;"%>
+  <button onClick='showResult()' class="list-group-item" style="display: inline;">Submit Game</button>
+</div>
